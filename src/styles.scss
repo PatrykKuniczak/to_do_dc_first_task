@@ -65,7 +65,6 @@ body {
         border-radius: 20px;
 
         &:hover {
-
           @include animateOpacity(0.7, 1, 0.4);
           outline: black solid 2px;
         }
@@ -125,18 +124,11 @@ body {
           @include animateOpacity(0.7, 1, 0.4);
           outline: black solid 2px;
         }
-
-        option {
-          &:active {
-            background-color: black;
-          }
-
-        }
-
       }
     }
 
   }
+
 
   #list-container {
     height: calc(100vh - 418px);

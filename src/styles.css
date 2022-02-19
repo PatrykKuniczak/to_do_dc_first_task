@@ -114,9 +114,6 @@ body #input-container form #category-select:hover, body #input-container form #c
     opacity: 1;
   }
 }
-body #input-container form #category-select option:active {
-  background-color: black;
-}
 body #list-container {
   height: calc(100vh - 418px);
   width: calc(100vw - 27%);
