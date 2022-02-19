@@ -7,6 +7,8 @@ const select = document.getElementById("category-select");
 
 const createTask = (event) => {
     const tasksList = document.getElementById("tasks-list");
+    const input = document.getElementById("input-bar");
+
     event.preventDefault();
 
     const name = event.target[0].value;
@@ -14,9 +16,11 @@ const createTask = (event) => {
     globalId++;
 
     mainObj[globalId] = {name, category};
-    return tasksList.innerHTML += `<li id=${globalId}> <text> ${name} [${category}]</text>
+    tasksList.innerHTML += `<li id=${globalId}> <text> ${name} [${category}]</text>
     <button class='list-btn' type='button' onclick="deleteTask(this.parentNode.id)"><img src='img/delete.svg' alt='Delete Button'/></button>
     </li>`;
+
+    return input.outerHTML = "<input id='input-bar' name='input-bar' type='text' placeholder='Dodaj zadanie: ' autocomplete='off' autofocus required>";
 }
 
 const createOptions = () => {
