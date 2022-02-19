@@ -1,5 +1,6 @@
 import {mainObj} from "./main.mjs";
 
+
 let counter = 0;
 const optionObj = {"activity": "Aktywność", "work": "Praca", "hobby": "Hobby", "sport": "Sport"}
 const select = document.getElementById("category-select");
@@ -19,11 +20,8 @@ export const createTask = (event) => {
 export const createOptions = () => {
 
     for (const [key, value] of Object.entries(optionObj)) {
-        const element = document.createElement("option");
-        element.value = key;
-        const text = document.createTextNode(`${value}`);
-        element.appendChild(text);
-        select.appendChild(element);
+        const element = `<option value=${key}> ${value}</option>`
+        select.innerHTML += element;
     }
 }
 
@@ -35,4 +33,9 @@ export const displayTask = () => {
         <button class='list-btn' type='button'><img src='img/edit.png' alt='Edit Button'/></button> 
         <button class='list-btn' type='button'><img src='img/delete.svg' alt='Delete Button'/></button>
         </li>`;
+}
+
+
+export const deleteTask = (event) => {
+
 }
