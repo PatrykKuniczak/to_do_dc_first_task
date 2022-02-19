@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>To Do</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="./styles.css"/>
 </head>
 <body>
 
@@ -15,20 +15,16 @@
 </span>
 
 <div id="input-container">
-    <form>
+    <form id="input-form">
         <div>
             <label for="input-bar"></label>
             <input id="input-bar" name="input-bar" type="text" placeholder="Dodaj zadanie: " autocomplete="off"
-                   autofocus/>
-            <button type="submit" id="submit-btn"><img src="./img/add_task.svg" alt="Add Task"></button>
+                   autofocus required/>
+            <button type="submit" id="submit-btn"><img src="img/add_task.svg" alt="Add Task"></button>
         </div>
 
         <label for="category-select"></label>
         <select required="required" id="category-select">
-            <option value="activity">Aktywność</option>
-            <option value="work">Praca</option>
-            <option value="hobby">Hobby</option>
-            <option value="sport">Sport</option>
         </select>
     </form>
 
@@ -36,20 +32,20 @@
 </div>
 
 <div id="list-container">
-    <ul>
+    <ul id="tasks-list">
         <li>
             <text>
                 hehe
             </text>
 
-            <button class="list-btn" type="button"><img src="./img/edit.png" alt="Edit Button"></button>
-            <button class="list-btn" type="button"><img src="./img/delete.svg" alt="Delete Button"></button>
+            <button class="list-btn" type="button"><img src="img/edit.png" alt="Edit Button"></button>
+            <button class="list-btn" type="button"><img src="img/delete.svg" alt="Delete Button"></button>
         </li>
     </ul>
 
 </div>
 
-<script src="main.js">
+<script type="module" src="main.mjs">
 </script>
 
 </body>
